@@ -12,8 +12,13 @@ jobs:
         with:
           node-version: '16'
       - run: npm install @commitlint/{config-conventional,cli}
-      - run: npx commitlint --from=HEAD~1 --to=HEAD
-# uses commitlint script to check formatting to ensure conventional push notation
+      - run: |
+          if git rev-parse --verify HEAD >/dev/null 2>&1; then
+            npx commitlint --from=HEAD~1 --to=HEAD
+          else
+            echo "No previous commits found; skipping commitlint."
+          fi
+
   markdownlint:
     runs-on: ubuntu-latest
     steps:
@@ -23,4 +28,4 @@ jobs:
         with:
           node-version: '16'
       - run: npm install markdownlint-cli
-      - run: npx markdownlint '**/*.md''
+      - run: npx markdownlint '**/*.md'
