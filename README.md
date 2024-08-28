@@ -31,7 +31,7 @@
 **Exam Resources:**
 
 - [AWS Certified Cloud Practitioner Sample Exam Questions](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Sample-Questions.pdf)
-- [kananinirav - AWS Certified Cloud Practitioner Practice Exams](https://kananinirav.com/practice-exam/exams.html)
+- [Examstopics - AWS Certified Cloud Practitioner Practice Exams](https://www.examtopics.com/exams/amazon/aws-certified-cloud-practitioner-clf-c02/)
 
 # Table of Contents
 
