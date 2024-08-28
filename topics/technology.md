@@ -115,7 +115,7 @@
 - Isolated network in AWS to launch resources securely.
 - Supports features like subnets, route tables, internet gateways, and VPC peering.
 
-![image](../assets/vpc.png)
+![VPC Architecture](../assets/vpc.png)
 
 ### Domain Name System (DNS)
 
