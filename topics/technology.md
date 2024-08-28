@@ -85,6 +85,8 @@
 - **EBS Volumes:** Persistent storage attached to EC2 instances.
 - **EC2 Instance Store:** Temporary storage directly attached to EC2 instances, faster with higher I/O speed.
 - **Amazon Elastic File Systems (EFS):** Serverless network file system for sharing files among multiple instances.
+- **FSx:** Storage shelf tailored for specific conditions which supports Windows workloads with a seamless integration.
+- **Elastic Disaster Recovery:** Backup source to minimize downtime and data loss with a quick recovery time and a cost-effective solution.
 
 ### Storage Gateway
 
