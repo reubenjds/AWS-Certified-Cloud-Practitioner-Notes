@@ -1,0 +1,26 @@
+name: Check Commit Messages and Formatting
+# pipeline is used to check all formatting to ensure correct format
+on: [push, pull_request]
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - run: npm install @commitlint/{config-conventional,cli}
+      - run: npx commitlint --from=HEAD~1 --to=HEAD
+# uses commitlint script to check formatting to ensure conventional push notation
+  markdownlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - run: npm install markdownlint-cli
+      - run: npx markdownlint '**/*.md''
