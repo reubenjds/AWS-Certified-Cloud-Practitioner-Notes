@@ -48,7 +48,7 @@
 - Create individual users instead of using root.
 - Use roles for EC2 instances.
 
-### Security Groups 
+### Security Groups
 
 - Act as an extra layer of security to determine who operate at the instance level.
 - Allows you to specify allowable protocols
@@ -63,9 +63,10 @@
 
 - Resources gained from the internet.
 
-## Private Subnet
+### Private Subnet
 
 - Resources that are not publicly accessible from the world.
+
 ### Web Application Firewall (WAF)
 
 - Protects web applications from common web attacks like SQL injection.
