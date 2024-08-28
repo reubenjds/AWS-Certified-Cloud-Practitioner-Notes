@@ -18,13 +18,25 @@ jobs:
         id: get_commit_messages
         run: |
           COMMIT_MESSAGES=$(git log origin/main..HEAD --pretty=format:"%s")
-          echo "::set-output name=messages::$COMMIT_MESSAGES"
+          echo "$COMMIT_MESSAGES"
+          echo "messages=$COMMIT_MESSAGES" >> $GITHUB_ENV
+
+      - name: Check for new commits
+        id: check_commits
+        run: |
+          if [[ -z "${{ env.messages }}" ]]; then
+            echo "No new commits to validate."
+            echo "has_commits=false" >> $GITHUB_ENV
+          else
+            echo "Commits found."
+            echo "has_commits=true" >> $GITHUB_ENV
+          fi
 
       - name: Validate commit messages
-        if: ${{ steps.get_commit_messages.outputs.messages != '' }}
+        if: ${{ env.has_commits == 'true' }}
         run: |
           PREFIXES="^(fix|feat|docs|ci|chore):"
-          echo "${{ steps.get_commit_messages.outputs.messages }}" | while IFS= read -r line; do
+          echo "${{ env.messages }}" | while IFS= read -r line; do
             if [[ ! $line =~ $PREFIXES ]]; then
               echo "Invalid commit message: $line"
               exit 1
