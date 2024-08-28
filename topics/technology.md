@@ -78,6 +78,8 @@
 | **Cost (Retrieval)**         | No retrieval cost                                    | Charges apply when moving to IA or Glacier tiers                               | Retrieval costs apply                                  | Retrieval costs apply                                           | Retrieval costs apply                                      | Retrieval costs apply                                |
 | **Minimum Storage Duration** | No minimum                                           | 30 days (infrequent tier), 90 days (archive tiers)                             | 30 days                                                | 30 days                                                         | 90 days                                                    | 180 days                                             |
 
+![S3 Storage Tiers](../assets/s3_storage_tiers.png)
+
 ### EC2 Storage
 
 - **EBS Volumes:** Persistent storage attached to EC2 instances.
