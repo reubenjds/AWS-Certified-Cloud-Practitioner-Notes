@@ -8,25 +8,19 @@ on:
       - synchronize
 
 jobs:
-  check-commit-messages:
+  check-pr-title:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Get PR title
+        id: get_pr_title
+        run: echo "PR_TITLE=$(echo ${{ github.event.pull_request.title }})" >> $GITHUB_ENV
 
-      - name: Get commit messages
-        id: get_commit_messages
-        run: |
-          COMMIT_MESSAGES=$(git log origin/main..HEAD --pretty=format:"%s")
-          echo "$COMMIT_MESSAGES"
-          echo "messages=$COMMIT_MESSAGES" >> $GITHUB_ENV
-
-      - name: Validate commit messages
+      - name: Validate PR title
         run: |
           PREFIXES="^(fix|feat|docs|ci|chore):"
-          echo "${{ env.messages }}" | while IFS= read -r line; do
-            if [[ ! $line =~ $PREFIXES ]]; then
-              echo "Invalid commit message: $line"
-              exit 1
-            fi
-          done
+          if [[ ! "${PR_TITLE}" =~ $PREFIXES ]]; then
+            echo "Invalid PR title: ${PR_TITLE}"
+            exit 1
+          else
+            echo "PR title is valid: ${PR_TITLE}"
+          fi
