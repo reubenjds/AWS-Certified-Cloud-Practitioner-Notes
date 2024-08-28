@@ -5,6 +5,7 @@
    - [4 Sections](#4-sections)
    - [Passing Score](#passing-score)
    - [Useful Links](#useful-links)
+   - [Exam Resources](#exam-resources)
 
 2. [Cloud Concepts](#cloud-concepts)
 
@@ -141,12 +142,12 @@
 
 **Passing Score:** 70%
 
-**Useful Links:**
+### **Useful Links:**
 
 - [AWS Overview Whitepaper](https://d1.awsstatic.com/whitepapers/aws-overview.pdf)
 - [AWS Terminology Cheat Sheet](https://www.pluralsight.com/resources/blog/cloud/your-aws-terminology-cheat-sheet)
 
-**Exam Resources:**
+### **Exam Resources:**
 
 - [AWS Certified Cloud Practitioner Sample Exam Questions](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Sample-Questions.pdf)
 - [Examstopics - AWS Certified Cloud Practitioner Practice Exams](https://www.examtopics.com/exams/amazon/aws-certified-cloud-practitioner-clf-c02/)
@@ -272,11 +273,24 @@
 - Supports various storage classes (e.g., S3 Standard, Glacier) for different use cases.
 - Provides features like versioning, access controls, and data durability.
 
+| Feature                      | S3 Standard                                          | S3 Intelligent-Tiering                                                         | S3 Standard-IA                                         | S3 One Zone-IA                                                  | S3 Glacier                                                 | S3 Glacier Deep Archive                              |
+| ---------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------ | --------------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------- |
+| **Description**              | General-purpose storage for frequently accessed data | Automatically moves data to the most cost-effective access tier based on usage | Infrequently accessed data, but rapid retrieval needed | Infrequently accessed data stored in a single availability zone | Long-term archive with retrieval times in minutes to hours | Lowest-cost storage for data that is rarely accessed |
+| **Retrieval Time**           | Milliseconds                                         | Milliseconds                                                                   | Milliseconds                                           | Milliseconds                                                    | Minutes to hours                                           | Up to 12 hours                                       |
+| **Use Cases**                | Frequently accessed data, low-latency needs          | Data with unknown or changing access patterns                                  | Infrequent access but needs quick retrieval            | Infrequently accessed, non-critical data                        | Archival data that doesn't require immediate access        | Long-term data retention and compliance needs        |
+| **Cost (Storage)**           | Higher cost per GB                                   | Variable cost, optimized based on access patterns                              | Lower cost than S3 Standard                            | Lower cost than S3 Standard-IA                                  | Lower cost than S3 Standard-IA                             | Lowest cost                                          |
+| **Cost (Retrieval)**         | No retrieval cost                                    | Charges apply when moving to IA or Glacier tiers                               | Retrieval costs apply                                  | Retrieval costs apply                                           | Retrieval costs apply                                      | Retrieval costs apply                                |
+| **Minimum Storage Duration** | No minimum                                           | 30 days (infrequent tier), 90 days (archive tiers)                             | 30 days                                                | 30 days                                                         | 90 days                                                    | 180 days                                             |
+
+![S3 Storage Tiers](../assets/s3_storage_tiers.png)
+
 ### EC2 Storage
 
 - **EBS Volumes:** Persistent storage attached to EC2 instances.
 - **EC2 Instance Store:** Temporary storage directly attached to EC2 instances, faster with higher I/O speed.
 - **Amazon Elastic File Systems (EFS):** Serverless network file system for sharing files among multiple instances.
+- **FSx:** Storage shelf tailored for specific conditions which supports Windows workloads with a seamless integration.
+- **Elastic Disaster Recovery:** Backup source to minimize downtime and data loss with a quick recovery time and a cost-effective solution.
 
 ### Storage Gateway
 
@@ -308,6 +322,8 @@
 
 - Isolated network in AWS to launch resources securely.
 - Supports features like subnets, route tables, internet gateways, and VPC peering.
+
+![VPC Architecture](../assets/vpc.png)
 
 ### Domain Name System (DNS)
 
@@ -346,6 +362,12 @@
 
 - Physical devices to transfer large amounts of data to AWS.
 
+| Feature              | AWS Snowcone              | AWS Snowball Edge                     | AWS Snowmobile                                                |
+| -------------------- | ------------------------- | ------------------------------------- | ------------------------------------------------------------- |
+| **Storage Capacity** | Up to 8 TB usable storage | Up to 80 TB usable storage per device | Up to 100 PB per Snowmobile truck                             |
+| **Pricing**          | Pay per use (low cost)    | Pay per use (medium cost)             | Pay per use (high cost due to scale and operation complexity) |
+| **Migration Size**   | Small-scale data transfer | Medium to large-scale data transfer   | Massive-scale data transfer (exabyte-level)                   |
+
 ### DataSync
 
 - Online data transfer service for moving data from on-premises to AWS.
@@ -357,6 +379,16 @@
 ### AWS RedShift
 
 - Scalable data warehouse solution for handling exabyte-scale data.
+
+### Elastic Container Service (ECS)
+
+- Fully managed and serverless using Fargate
+- Supports Docker and Docker Compose CLI
+
+### Elastic Kubernetes Service (EKS)
+
+- Fully open source and runs with EC2, Fargate, Multiple Local Zones and Wavelength
+- Supports Kubernetes
 
 ### Analytics Services
 
@@ -404,6 +436,21 @@
 - **Amazon WorkSpaces:** Virtual desktops in the cloud.
 - **Amazon Connect:** Cloud-based contact center service.
 
+### AWS Core Services Overview
+
+| Service                | Description                          | Use Case                                   | Key Features                                          |
+| ---------------------- | ------------------------------------ | ------------------------------------------ | ----------------------------------------------------- |
+| **Amazon EC2**         | Virtual servers in the cloud         | Compute instances for applications         | Scalability, flexible pricing, various instance types |
+| **Amazon S3**          | Scalable object storage service      | File storage and backup                    | Durability, high availability, lifecycle management   |
+| **Amazon RDS**         | Managed relational database service  | SQL database hosting                       | Automated backups, scaling, high availability         |
+| **Amazon DynamoDB**    | Managed NoSQL database service       | High-performance, low-latency data storage | Fully managed, high throughput, and low latency       |
+| **AWS Lambda**         | Serverless compute service           | Running code in response to events         | No server management, automatic scaling               |
+| **Amazon VPC**         | Virtual Private Cloud                | Isolated network setup                     | Customizable network configuration, security          |
+| **Amazon CloudFront**  | Content delivery network (CDN)       | Delivering content with low latency        | Global distribution, edge caching                     |
+| **Amazon IAM**         | Identity and Access Management       | User and permission management             | Fine-grained access control, security policies        |
+| **Amazon CloudWatch**  | Monitoring and observability service | Logging, monitoring, and alerts            | Metrics collection, log management, alarms            |
+| **AWS CloudFormation** | Infrastructure as Code               | Automated resource provisioning            | Template-based deployment, version control            |
+
 ---
 
 ## Security and Compliance
@@ -413,6 +460,8 @@
 - **AWS Responsibility:** Security of the cloud, including infrastructure and managed services.
 - **Customer Responsibility:** Security in the cloud, including data management and application security.
 
+![Shared Responsibility Model](../assets/shared_responsibility_model.jpg)
+
 ### Well Architected Framework: 6 Pillars
 
 1. **Operational Excellence:** Plan for failure and continuously improve operations.
@@ -421,6 +470,8 @@
 4. **Performance Efficiency:** Use resources efficiently and experiment with new services.
 5. **Cost Optimization:** Deliver resilient solutions at the lowest cost.
 6. **Sustainability:** Minimize environmental impact and maximize utilization.
+
+![Well Architected Framework](../assets/well_architected_framework.png)
 
 ### Identity and Access Management (IAM)
 
@@ -435,6 +486,27 @@
 - Use strong password policies.
 - Create individual users instead of using root.
 - Use roles for EC2 instances.
+
+### Security Groups
+
+- Act as an extra layer of security to determine who operate at the instance level.
+- Allows you to specify allowable protocols
+- Stateful (if traffic goes out it allows the traffic to redirect back)
+
+![Security Group Architecture](../assets/security_groups.png)
+
+### NACL (Network Access Control List)
+
+- Tries to allow or deny traffic based on protocol and source IPs
+- Operates at the subnet level
+
+### Public Subnet
+
+- Resources gained from the internet.
+
+### Private Subnet
+
+- Resources that are not publicly accessible from the world.
 
 ### Web Application Firewall (WAF)
 
@@ -480,6 +552,24 @@
 
 - Store and manage secrets like database credentials securely.
 
+### AWS Security and Compliance
+
+| Service                                  | Description                                  | Use Case                                         | Key Features                                             |
+| ---------------------------------------- | -------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------- |
+| **AWS Shield**                           | DDoS protection service                      | Protecting against DDoS attacks                  | Automatic attack mitigation, 24/7 support                |
+| **AWS WAF**                              | Web Application Firewall                     | Protecting web applications                      | Customizable rules, integration with CloudFront          |
+| **AWS KMS**                              | Key Management Service                       | Managing encryption keys                         | Centralized key management, automatic key rotation       |
+| **AWS CloudTrail**                       | API call logging service                     | Monitoring API activity                          | Detailed logs, compliance auditing                       |
+| **AWS Config**                           | Resource configuration monitoring            | Compliance tracking and auditing                 | Track configuration changes, automated compliance checks |
+| **AWS Macie**                            | Data security and privacy service            | Discover and protect sensitive data              | Automated data classification and protection             |
+| **AWS GuardDuty**                        | Threat detection service                     | Continuous security monitoring                   | Threat detection and alerting                            |
+| **AWS Inspector**                        | Security assessment service                  | Assessing security vulnerabilities               | Automated security assessments                           |
+| **AWS Artifact**                         | Compliance reports and documentation         | Access to compliance reports                     | Access to AWS compliance documentation                   |
+| **AWS Cognito**                          | User authentication and access control       | Managing user identities and access              | User pools, identity pools, secure authentication        |
+| **AWS Secrets Manager**                  | Manage secrets and sensitive data            | Securely storing and managing secrets            | Automatic rotation, secure access                        |
+| **AWS CloudHSM**                         | Hardware security module service             | Managing encryption keys with dedicated hardware | FIPS 140-2 compliance, dedicated HSM devices             |
+| **Identity and Access Management (IAM)** | Service for managing access to AWS resources | Managing users and permissions                   | Fine-grained access control, security policies           |
+
 ---
 
 ## Billing and Pricing
@@ -503,6 +593,13 @@
 - **Reserved Instances (RIs):** Commit to using an instance type in a particular region for 1 or 3 years. Offers significant savings for predictable workloads.
 - **Spot Instances:** Use spare AWS capacity at a discounted rate. Instances can be terminated if capacity is no longer available, making it suitable for flexible, fault-tolerant workloads.
 - **Dedicated Hosts:** Pay for a physical server fully dedicated to your use. Helps meet compliance requirements and allows use of existing server-bound software licenses.
+
+| Pricing Model          | Description                                          | Use Case                            | Key Features                                     |
+| ---------------------- | ---------------------------------------------------- | ----------------------------------- | ------------------------------------------------ |
+| **On-Demand**          | Pay for compute capacity by the hour or second       | Short-term, unpredictable usage     | No upfront commitment, flexible pricing          |
+| **Reserved Instances** | Commit to using AWS resources for a 1 or 3-year term | Long-term, predictable usage        | Significant discounts, capacity reservation      |
+| **Spot Instances**     | Bid for unused EC2 capacity                          | Cost savings for flexible tasks     | Potential cost savings, interruptions possible   |
+| **Savings Plans**      | Flexible pricing model for various AWS services      | Commit to a certain amount of usage | Discounts over on-demand pricing, flexible usage |
 
 ### Lambda Pricing
 
@@ -583,8 +680,6 @@
 ---
 
 ## Governance and Management Services
-
-- Help maintain control over costs, compliance, and security across AWS accounts.
 
 ### Organizations
 
@@ -707,14 +802,16 @@
 - **Service Limit Increases:** Requests for increasing default service quotas, available to all customers.
 - **Technical Support:** Available for customers on Developer, Business, or Enterprise plans. Covers technical issues related to AWS services.
 
-### Basic Support Plan Features
+### Support Plans
+
+#### Basic Support Plan Features
 
 - **Account and Billing Support:** Included.
 - **Service Limit Increases:** Included.
 - **Customer Service Access:** Available via email only.
 - **Discussion Forums:** Access to AWS discussion forums for community-based support.
 
-### Developer Support Plan Features
+#### Developer Support Plan Features
 
 - **Account and Billing Support:** Included.
 - **Service Limit Increases:** Included.
@@ -722,7 +819,7 @@
 - **Unlimited Cases:** Can open unlimited technical support cases.
 - **Cloud Support Associate:** Business-hours access via email.
 
-### Business Support Plan Features
+#### Business Support Plan Features
 
 - **Account and Billing Support:** Included.
 - **Service Limit Increases:** Included.
@@ -730,7 +827,7 @@
 - **Trusted Advisor Checks:** Access to a full set of Trusted Advisor checks for account optimization.
 - **Cloud Support Engineers:** 24/7 access via email, phone, or chat.
 
-### Enterprise Support Plan Features
+#### Enterprise Support Plan Features
 
 - **Account and Billing Support:** Included.
 - **Service Limit Increases:** Included.
@@ -740,3 +837,17 @@
 - **Infrastructure Event Management:** Support for planning and management during major events.
 - **Trusted Advisor Checks:** Full access to all checks for comprehensive account health monitoring.
 - **Cloud Support Engineers:** 24/7 access via email, phone, or chat.
+
+| Feature                             | Basic Support                            | Developer Support              | Business Support                                | Enterprise Support                            |
+| ----------------------------------- | ---------------------------------------- | ------------------------------ | ----------------------------------------------- | --------------------------------------------- |
+| **Cost**                            | Free                                     | Starts at $29/month            | Starts at $100/month or 3% of monthly AWS usage | Starts at $15,000/month or based on AWS usage |
+| **24/7 Access to Customer Support** | No                                       | Yes, via email                 | Yes, via phone, chat, and email                 | Yes, via phone, chat, and email               |
+| **Technical Account Manager (TAM)** | No                                       | No                             | No                                              | Yes                                           |
+| **AWS Trusted Advisor**             | Core checks                              | Full access to core checks     | Full access                                     | Full access with additional guidance          |
+| **Support Response Times**          | None                                     | General guidance: < 24 hours   | Urgent issues: < 1 hour                         | Critical issues: < 15 minutes                 |
+| **Third-Party Software Support**    | No                                       | No                             | Yes                                             | Yes                                           |
+| **Infrastructure Event Management** | No                                       | No                             | Available for an additional fee                 | Yes                                           |
+| **Architecture Support**            | General best practices via documentation | General architectural guidance | Contextual architectural guidance               | Consultative architectural review             |
+| **Operations Support**              | No                                       | No                             | Support for common operations                   | Support for complex operations                |
+| **Programmatic Case Management**    | No                                       | Yes                            | Yes                                             | Yes                                           |
+| **Access to Online Training**       | Limited                                  | Limited                        | Access to selected trainings                    | Full access to AWS training                   |
