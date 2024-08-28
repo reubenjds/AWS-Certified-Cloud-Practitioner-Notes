@@ -15,17 +15,18 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Get commit messages
+        id: get_commit_messages
         run: |
           COMMIT_MESSAGES=$(git log origin/main..HEAD --pretty=format:"%s")
-          echo "$COMMIT_MESSAGES"
-        id: commit_messages
+          echo "::set-output name=messages::$COMMIT_MESSAGES"
 
       - name: Validate commit messages
+        if: ${{ steps.get_commit_messages.outputs.messages != '' }}
         run: |
           PREFIXES="^(fix|feat|docs|ci|chore):"
-          while IFS= read -r line; do
+          echo "${{ steps.get_commit_messages.outputs.messages }}" | while IFS= read -r line; do
             if [[ ! $line =~ $PREFIXES ]]; then
               echo "Invalid commit message: $line"
               exit 1
             fi
-          done <<< "${{ steps.commit_messages.outputs.COMMIT_MESSAGES }}"
+          done
