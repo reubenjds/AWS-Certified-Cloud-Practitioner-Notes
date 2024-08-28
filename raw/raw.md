@@ -146,6 +146,11 @@
 - [AWS Overview Whitepaper](https://d1.awsstatic.com/whitepapers/aws-overview.pdf)
 - [AWS Terminology Cheat Sheet](https://www.pluralsight.com/resources/blog/cloud/your-aws-terminology-cheat-sheet)
 
+**Exam Resources:**
+
+- [AWS Certified Cloud Practitioner Sample Exam Questions](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Sample-Questions.pdf)
+- [kananinirav - AWS Certified Cloud Practitioner Practice Exams](https://kananinirav.com/practice-exam/exams.html)
+
 ---
 
 ## Cloud Concepts
@@ -575,7 +580,9 @@
 - **Tracking:** Track and report costs by tagging resources with project names, departments, or other identifiers.
 - **Cost Allocation Reports:** Generate reports based on tag-specific usage.
 
-### Governance and Management Services
+---
+
+## Governance and Management Services
 
 - Help maintain control over costs, compliance, and security across AWS accounts.
 
