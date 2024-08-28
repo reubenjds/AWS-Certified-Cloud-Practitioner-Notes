@@ -174,6 +174,16 @@
 
 - Scalable data warehouse solution for handling exabyte-scale data.
 
+### Elastic Container Service (ECS)
+
+- Fully managed and serverless using Fargate
+- Supports Docker and Docker Compose CLI
+
+### Elastic Kubernetes Service (EKS)
+
+- Fully open source and runs with EC2, Fargate, Multiple Local Zones and Wavelength
+- Mainly supports Kubernetes
+
 ### Analytics Services
 
 - **Athena:** Query data in S3 using SQL.
