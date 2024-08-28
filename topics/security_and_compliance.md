@@ -21,6 +21,8 @@
 - **AWS Responsibility:** Security of the cloud, including infrastructure and managed services.
 - **Customer Responsibility:** Security in the cloud, including data management and application security.
 
+![Shared Responsibility Model](../assets/shared_responsibility_model.jpg)
+
 ### Well Architected Framework: 6 Pillars
 
 1. **Operational Excellence:** Plan for failure and continuously improve operations.
@@ -29,6 +31,8 @@
 4. **Performance Efficiency:** Use resources efficiently and experiment with new services.
 5. **Cost Optimization:** Deliver resilient solutions at the lowest cost.
 6. **Sustainability:** Minimize environmental impact and maximize utilization.
+
+![Well Architected Framework](../assets/well_architected_framework.png)
 
 ### Identity and Access Management (IAM)
 

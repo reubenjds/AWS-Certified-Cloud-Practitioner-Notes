@@ -51,14 +51,16 @@
 - **Service Limit Increases:** Requests for increasing default service quotas, available to all customers.
 - **Technical Support:** Available for customers on Developer, Business, or Enterprise plans. Covers technical issues related to AWS services.
 
-### Basic Support Plan Features
+### Support Plans
+
+#### Basic Support Plan Features
 
 - **Account and Billing Support:** Included.
 - **Service Limit Increases:** Included.
 - **Customer Service Access:** Available via email only.
 - **Discussion Forums:** Access to AWS discussion forums for community-based support.
 
-### Developer Support Plan Features
+#### Developer Support Plan Features
 
 - **Account and Billing Support:** Included.
 - **Service Limit Increases:** Included.
@@ -66,7 +68,7 @@
 - **Unlimited Cases:** Can open unlimited technical support cases.
 - **Cloud Support Associate:** Business-hours access via email.
 
-### Business Support Plan Features
+#### Business Support Plan Features
 
 - **Account and Billing Support:** Included.
 - **Service Limit Increases:** Included.
@@ -74,7 +76,7 @@
 - **Trusted Advisor Checks:** Access to a full set of Trusted Advisor checks for account optimization.
 - **Cloud Support Engineers:** 24/7 access via email, phone, or chat.
 
-### Enterprise Support Plan Features
+#### Enterprise Support Plan Features
 
 - **Account and Billing Support:** Included.
 - **Service Limit Increases:** Included.
@@ -84,3 +86,17 @@
 - **Infrastructure Event Management:** Support for planning and management during major events.
 - **Trusted Advisor Checks:** Full access to all checks for comprehensive account health monitoring.
 - **Cloud Support Engineers:** 24/7 access via email, phone, or chat.
+
+| Feature                             | Basic Support                            | Developer Support              | Business Support                                | Enterprise Support                            |
+| ----------------------------------- | ---------------------------------------- | ------------------------------ | ----------------------------------------------- | --------------------------------------------- |
+| **Cost**                            | Free                                     | Starts at $29/month            | Starts at $100/month or 3% of monthly AWS usage | Starts at $15,000/month or based on AWS usage |
+| **24/7 Access to Customer Support** | No                                       | Yes, via email                 | Yes, via phone, chat, and email                 | Yes, via phone, chat, and email               |
+| **Technical Account Manager (TAM)** | No                                       | No                             | No                                              | Yes                                           |
+| **AWS Trusted Advisor**             | Core checks                              | Full access to core checks     | Full access                                     | Full access with additional guidance          |
+| **Support Response Times**          | None                                     | General guidance: < 24 hours   | Urgent issues: < 1 hour                         | Critical issues: < 15 minutes                 |
+| **Third-Party Software Support**    | No                                       | No                             | Yes                                             | Yes                                           |
+| **Infrastructure Event Management** | No                                       | No                             | Available for an additional fee                 | Yes                                           |
+| **Architecture Support**            | General best practices via documentation | General architectural guidance | Contextual architectural guidance               | Consultative architectural review             |
+| **Operations Support**              | No                                       | No                             | Support for common operations                   | Support for complex operations                |
+| **Programmatic Case Management**    | No                                       | Yes                            | Yes                                             | Yes                                           |
+| **Access to Online Training**       | Limited                                  | Limited                        | Access to selected trainings                    | Full access to AWS training                   |

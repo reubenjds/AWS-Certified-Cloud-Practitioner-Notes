@@ -69,6 +69,15 @@
 - Supports various storage classes (e.g., S3 Standard, Glacier) for different use cases.
 - Provides features like versioning, access controls, and data durability.
 
+| Feature                      | S3 Standard                                          | S3 Intelligent-Tiering                                                         | S3 Standard-IA                                         | S3 One Zone-IA                                                  | S3 Glacier                                                 | S3 Glacier Deep Archive                              |
+| ---------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------ | --------------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------- |
+| **Description**              | General-purpose storage for frequently accessed data | Automatically moves data to the most cost-effective access tier based on usage | Infrequently accessed data, but rapid retrieval needed | Infrequently accessed data stored in a single availability zone | Long-term archive with retrieval times in minutes to hours | Lowest-cost storage for data that is rarely accessed |
+| **Retrieval Time**           | Milliseconds                                         | Milliseconds                                                                   | Milliseconds                                           | Milliseconds                                                    | Minutes to hours                                           | Up to 12 hours                                       |
+| **Use Cases**                | Frequently accessed data, low-latency needs          | Data with unknown or changing access patterns                                  | Infrequent access but needs quick retrieval            | Infrequently accessed, non-critical data                        | Archival data that doesn't require immediate access        | Long-term data retention and compliance needs        |
+| **Cost (Storage)**           | Higher cost per GB                                   | Variable cost, optimized based on access patterns                              | Lower cost than S3 Standard                            | Lower cost than S3 Standard-IA                                  | Lower cost than S3 Standard-IA                             | Lowest cost                                          |
+| **Cost (Retrieval)**         | No retrieval cost                                    | Charges apply when moving to IA or Glacier tiers                               | Retrieval costs apply                                  | Retrieval costs apply                                           | Retrieval costs apply                                      | Retrieval costs apply                                |
+| **Minimum Storage Duration** | No minimum                                           | 30 days (infrequent tier), 90 days (archive tiers)                             | 30 days                                                | 30 days                                                         | 90 days                                                    | 180 days                                             |
+
 ### EC2 Storage
 
 - **EBS Volumes:** Persistent storage attached to EC2 instances.
@@ -106,6 +115,8 @@
 - Isolated network in AWS to launch resources securely.
 - Supports features like subnets, route tables, internet gateways, and VPC peering.
 
+![image](../assets/vpc.png)
+
 ### Domain Name System (DNS)
 
 - Connects domain names with web servers, facilitating internet traffic routing.
@@ -142,6 +153,12 @@
 ### Snow Family
 
 - Physical devices to transfer large amounts of data to AWS.
+
+| Feature              | AWS Snowcone              | AWS Snowball Edge                     | AWS Snowmobile                                                |
+| -------------------- | ------------------------- | ------------------------------------- | ------------------------------------------------------------- |
+| **Storage Capacity** | Up to 8 TB usable storage | Up to 80 TB usable storage per device | Up to 100 PB per Snowmobile truck                             |
+| **Pricing**          | Pay per use (low cost)    | Pay per use (medium cost)             | Pay per use (high cost due to scale and operation complexity) |
+| **Migration Size**   | Small-scale data transfer | Medium to large-scale data transfer   | Massive-scale data transfer (exabyte-level)                   |
 
 ### DataSync
 
