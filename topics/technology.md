@@ -217,3 +217,18 @@
 - **CloudTrail:** Tracks user activity and API calls for auditing.
 - **Amazon WorkSpaces:** Virtual desktops in the cloud.
 - **Amazon Connect:** Cloud-based contact center service.
+
+### AWS Core Services Overview
+
+| Service                | Description                          | Use Case                                   | Key Features                                          |
+| ---------------------- | ------------------------------------ | ------------------------------------------ | ----------------------------------------------------- |
+| **Amazon EC2**         | Virtual servers in the cloud         | Compute instances for applications         | Scalability, flexible pricing, various instance types |
+| **Amazon S3**          | Scalable object storage service      | File storage and backup                    | Durability, high availability, lifecycle management   |
+| **Amazon RDS**         | Managed relational database service  | SQL database hosting                       | Automated backups, scaling, high availability         |
+| **Amazon DynamoDB**    | Managed NoSQL database service       | High-performance, low-latency data storage | Fully managed, high throughput, and low latency       |
+| **AWS Lambda**         | Serverless compute service           | Running code in response to events         | No server management, automatic scaling               |
+| **Amazon VPC**         | Virtual Private Cloud                | Isolated network setup                     | Customizable network configuration, security          |
+| **Amazon CloudFront**  | Content delivery network (CDN)       | Delivering content with low latency        | Global distribution, edge caching                     |
+| **Amazon IAM**         | Identity and Access Management       | User and permission management             | Fine-grained access control, security policies        |
+| **Amazon CloudWatch**  | Monitoring and observability service | Logging, monitoring, and alerts            | Metrics collection, log management, alarms            |
+| **AWS CloudFormation** | Infrastructure as Code               | Automated resource provisioning            | Template-based deployment, version control            |

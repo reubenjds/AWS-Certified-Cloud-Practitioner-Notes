@@ -91,3 +91,21 @@
 ### Secrets Manager
 
 - Store and manage secrets like database credentials securely.
+
+### AWS Security and Compliance
+
+| Service                                  | Description                                  | Use Case                                         | Key Features                                             |
+| ---------------------------------------- | -------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------- |
+| **AWS Shield**                           | DDoS protection service                      | Protecting against DDoS attacks                  | Automatic attack mitigation, 24/7 support                |
+| **AWS WAF**                              | Web Application Firewall                     | Protecting web applications                      | Customizable rules, integration with CloudFront          |
+| **AWS KMS**                              | Key Management Service                       | Managing encryption keys                         | Centralized key management, automatic key rotation       |
+| **AWS CloudTrail**                       | API call logging service                     | Monitoring API activity                          | Detailed logs, compliance auditing                       |
+| **AWS Config**                           | Resource configuration monitoring            | Compliance tracking and auditing                 | Track configuration changes, automated compliance checks |
+| **AWS Macie**                            | Data security and privacy service            | Discover and protect sensitive data              | Automated data classification and protection             |
+| **AWS GuardDuty**                        | Threat detection service                     | Continuous security monitoring                   | Threat detection and alerting                            |
+| **AWS Inspector**                        | Security assessment service                  | Assessing security vulnerabilities               | Automated security assessments                           |
+| **AWS Artifact**                         | Compliance reports and documentation         | Access to compliance reports                     | Access to AWS compliance documentation                   |
+| **AWS Cognito**                          | User authentication and access control       | Managing user identities and access              | User pools, identity pools, secure authentication        |
+| **AWS Secrets Manager**                  | Manage secrets and sensitive data            | Securely storing and managing secrets            | Automatic rotation, secure access                        |
+| **AWS CloudHSM**                         | Hardware security module service             | Managing encryption keys with dedicated hardware | FIPS 140-2 compliance, dedicated HSM devices             |
+| **Identity and Access Management (IAM)** | Service for managing access to AWS resources | Managing users and permissions                   | Fine-grained access control, security policies           |

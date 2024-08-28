@@ -36,6 +36,13 @@
 - **Spot Instances:** Use spare AWS capacity at a discounted rate. Instances can be terminated if capacity is no longer available, making it suitable for flexible, fault-tolerant workloads.
 - **Dedicated Hosts:** Pay for a physical server fully dedicated to your use. Helps meet compliance requirements and allows use of existing server-bound software licenses.
 
+| Pricing Model          | Description                                          | Use Case                            | Key Features                                     |
+| ---------------------- | ---------------------------------------------------- | ----------------------------------- | ------------------------------------------------ |
+| **On-Demand**          | Pay for compute capacity by the hour or second       | Short-term, unpredictable usage     | No upfront commitment, flexible pricing          |
+| **Reserved Instances** | Commit to using AWS resources for a 1 or 3-year term | Long-term, predictable usage        | Significant discounts, capacity reservation      |
+| **Spot Instances**     | Bid for unused EC2 capacity                          | Cost savings for flexible tasks     | Potential cost savings, interruptions possible   |
+| **Savings Plans**      | Flexible pricing model for various AWS services      | Commit to a certain amount of usage | Discounts over on-demand pricing, flexible usage |
+
 ### Lambda Pricing
 
 - **Number of Requests:** Charged based on the total number of requests, including test invokes from the console.
