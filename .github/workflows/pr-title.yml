@@ -21,19 +21,7 @@ jobs:
           echo "$COMMIT_MESSAGES"
           echo "messages=$COMMIT_MESSAGES" >> $GITHUB_ENV
 
-      - name: Check for new commits
-        id: check_commits
-        run: |
-          if [[ -z "${{ env.messages }}" ]]; then
-            echo "No new commits to validate."
-            echo "has_commits=false" >> $GITHUB_ENV
-          else
-            echo "Commits found."
-            echo "has_commits=true" >> $GITHUB_ENV
-          fi
-
       - name: Validate commit messages
-        if: ${{ env.has_commits == 'true' }}
         run: |
           PREFIXES="^(fix|feat|docs|ci|chore):"
           echo "${{ env.messages }}" | while IFS= read -r line; do
