@@ -59,6 +59,13 @@
 - Tries to allow or deny traffic based on protocol and source IPs
 - Operates at the subnet level
 
+### Public Subnet
+
+- Resources gained from the internet.
+
+## Private Subnet
+
+- Resources that are not publicly accessible from the world.
 ### Web Application Firewall (WAF)
 
 - Protects web applications from common web attacks like SQL injection.
