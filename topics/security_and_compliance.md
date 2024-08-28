@@ -48,6 +48,17 @@
 - Create individual users instead of using root.
 - Use roles for EC2 instances.
 
+### Security Groups 
+
+- Act as an extra layer of security to determine who operate at the instance level.
+- Allows you to specify allowable protocols
+- Stateful (if traffic goes out it allows the traffic to redirect back)
+
+### NACL (Network Access Control List)
+
+- Tries to allow or deny traffic based on protocol and source IPs
+- Operates at the subnet level
+
 ### Web Application Firewall (WAF)
 
 - Protects web applications from common web attacks like SQL injection.
