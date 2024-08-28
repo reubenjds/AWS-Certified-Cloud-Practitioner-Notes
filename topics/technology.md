@@ -78,15 +78,16 @@
 | **Cost (Retrieval)**         | No retrieval cost                                    | Charges apply when moving to IA or Glacier tiers                               | Retrieval costs apply                                  | Retrieval costs apply                                           | Retrieval costs apply                                      | Retrieval costs apply                                |
 | **Minimum Storage Duration** | No minimum                                           | 30 days (infrequent tier), 90 days (archive tiers)                             | 30 days                                                | 30 days                                                         | 90 days                                                    | 180 days                                             |
 
-![image](../assets/s3_storage_tiers.png)
+
+![S3 Storage Tiers](../assets/s3_storage_tiers.png)
 
 ### EC2 Storage
 
 - **EBS Volumes:** Persistent storage attached to EC2 instances.
 - **EC2 Instance Store:** Temporary storage directly attached to EC2 instances, faster with higher I/O speed.
 - **Amazon Elastic File Systems (EFS):** Serverless network file system for sharing files among multiple instances.
-- **Elastic Disaster Recovery:** Backup source to minimize downtime and data loss with a quick recovery times.
-- **Fsx:** Storage shelf tailored for specific conditions to support and seamlessly integrate into Windows workloads.
+- **FSx:** Storage shelf tailored for specific conditions which supports Windows workloads with a seamless integration.
+- **Elastic Disaster Recovery:** Backup source to minimize downtime and data loss with a quick recovery time and a cost-effective solution.
 
 ### Storage Gateway
 
@@ -119,7 +120,7 @@
 - Isolated network in AWS to launch resources securely.
 - Supports features like subnets, route tables, internet gateways, and VPC peering.
 
-![image](../assets/vpc.png)
+![VPC Architecture](../assets/vpc.png)
 
 ### Domain Name System (DNS)
 
@@ -177,13 +178,11 @@
 - Scalable data warehouse solution for handling exabyte-scale data.
 
 ### Elastic Container Service (ECS)
-
-- Fully managed and serverless service using Fargate
+- Fully managed and serverless using Fargate
 - Supports Docker and Docker Compose CLI
 
 ### Elastic Kubernetes Service (EKS)
-
-- Fully open source which runs with EC2, Fargate, Local Zones and Wavelength
+- Fully open source and runs with EC2, Fargate, Multiple Local Zones and Wavelength
 - Supports Kubernetes
 
 ### Analytics Services

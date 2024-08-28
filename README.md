@@ -41,7 +41,7 @@
 
 2. [Technology](./topics/technology.md)
 
-- Types of Services, Elastic Compute Cloud (EC2), Lambda, Additional Compute Services, Simple Storage Service (S3), EC2 Storage, Storage Gateway, AWS Backup, Content Delivery Network, Amazon CloudFront, Amazon Global Accelerator, Amazon S3 Transfer Acceleration, Amazon Virtual Private Cloud (VPC), Domain Name System (DNS), Amazon Route 53, AWS Direct Connect, AWS VPN, API Gateway, Database Services, Database Migration Service (DMS), Snow Family, DataSync, Data Warehousing, AWS RedShift, Analytics Services, Artificial Intelligence and Machine Learning, Developer Tools, Infrastructure as Code (IaC), Loose Coupling, Auditing, Monitoring, and Logging
+- Types of Services, Elastic Compute Cloud (EC2), Lambda, Additional Compute Services, Simple Storage Service (S3), EC2 Storage, Storage Gateway, AWS Backup, Content Delivery Network, Amazon CloudFront, Amazon Global Accelerator, Amazon S3 Transfer Acceleration, Amazon Virtual Private Cloud (VPC), Domain Name System (DNS), Amazon Route 53, AWS Direct Connect, AWS VPN, API Gateway, Database Services, Database Migration Service (DMS), Snow Family, DataSync, Data Warehousing, AWS RedShift, Elastic Container Service (ECS), Elastic Kubernetes Service (EKS) Analytics Services, Artificial Intelligence and Machine Learning, Developer Tools, Infrastructure as Code (IaC), Loose Coupling, Auditing, Monitoring, and Logging
 
 3. [Security and Compliance](./topics/security_and_compliance.md)
 

@@ -54,6 +54,8 @@
 - Allows you to specify allowable protocols
 - Stateful (if traffic goes out it allows the traffic to redirect back)
 
+![Security Group Architecture](../assets/security_groups.png)
+
 ### NACL (Network Access Control List)
 
 - Tries to allow or deny traffic based on protocol and source IPs
