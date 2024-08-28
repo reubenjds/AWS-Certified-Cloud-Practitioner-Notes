@@ -78,6 +78,7 @@
 | **Cost (Retrieval)**         | No retrieval cost                                    | Charges apply when moving to IA or Glacier tiers                               | Retrieval costs apply                                  | Retrieval costs apply                                           | Retrieval costs apply                                      | Retrieval costs apply                                |
 | **Minimum Storage Duration** | No minimum                                           | 30 days (infrequent tier), 90 days (archive tiers)                             | 30 days                                                | 30 days                                                         | 90 days                                                    | 180 days                                             |
 
+
 ![S3 Storage Tiers](../assets/s3_storage_tiers.png)
 
 ### EC2 Storage
@@ -177,14 +178,12 @@
 - Scalable data warehouse solution for handling exabyte-scale data.
 
 ### Elastic Container Service (ECS)
-
 - Fully managed and serverless using Fargate
 - Supports Docker and Docker Compose CLI
 
 ### Elastic Kubernetes Service (EKS)
-
 - Fully open source and runs with EC2, Fargate, Multiple Local Zones and Wavelength
-- Mainly supports Kubernetes
+- Supports Kubernetes
 
 ### Analytics Services
 
