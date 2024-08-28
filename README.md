@@ -39,15 +39,15 @@
 
 - Servers, Usage Types, Advantages of Cloud Computing, Technical Terms, CapEx vs. OpEx, Cloud Computing Models, Cloud Deployment Models, Regions, Availability Zones (AZs), Edge Locations, AWS Management Console, Root User, AWS Command Line Interface (AWS CLI)
 
-2. [Technology](./topics/technology)
+2. [Technology](./topics/technology.md)
 
 - Types of Services, Elastic Compute Cloud (EC2), Lambda, Additional Compute Services, Simple Storage Service (S3), EC2 Storage, Storage Gateway, AWS Backup, Content Delivery Network, Amazon CloudFront, Amazon Global Accelerator, Amazon S3 Transfer Acceleration, Amazon Virtual Private Cloud (VPC), Domain Name System (DNS), Amazon Route 53, AWS Direct Connect, AWS VPN, API Gateway, Database Services, Database Migration Service (DMS), Snow Family, DataSync, Data Warehousing, AWS RedShift, Analytics Services, Artificial Intelligence and Machine Learning, Developer Tools, Infrastructure as Code (IaC), Loose Coupling, Auditing, Monitoring, and Logging
 
-3. [Security and Compliance](./topics/security_and_compliance)
+3. [Security and Compliance](./topics/security_and_compliance.md)
 
 - Shared Responsibility Model, Well Architected Framework: 6 Pillars, Identity and Access Management (IAM), IAM Best Practices, Web Application Firewall (WAF), Shield, Macie, Config, GuardDuty, Inspector, Artifact, Cognito, Key Management Service (KMS), Cloud HSM, Secrets Manager
 
-4. [Billing and Pricing](./topics/billing_and_pricing)
+4. [Billing and Pricing](./topics/billing_and_pricing.md)
 
 - Free Offer Types, Pricing Models, EC2 Pricing, Lambda Pricing, S3 Pricing, RDS Pricing, Application Discovery Service, Reduce Total Cost of Ownership (TCO), AWS Price List API, Budgets, Budget Types, Budgets in the Real World, Cost and Usage Reports, Cost Explorer, Cost Allocation Tags
 
