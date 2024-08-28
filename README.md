@@ -1,5 +1,7 @@
 # AWS Certified Cloud Practitioner
 
+You can view the full unorganized document [here](./raw/raw.md)
+
 ## 4 Sections:
 
 1. **Cloud Concepts:** 24%
